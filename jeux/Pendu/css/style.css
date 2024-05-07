@@ -1,0 +1,177 @@
+/* Réinitialisation des marges, paddings et box-sizing */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style du body */
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    user-select: none;
+    background-color: #0f2027;
+    overflow: hidden;
+}
+
+/* Style du header */
+header {
+    margin: 2rem 0;
+}
+
+/* Style des sections */
+section {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background: linear-gradient(to right, #db7878, #db7878);
+    box-shadow: 0 0 1rem #ffff;
+    max-width: 450px;
+    margin: 2rem auto;
+}
+
+/* Style des éléments de la section des lettres */
+section[id="letters"] {
+    margin-top: -20px; /* Réduire la marge supérieure pour remonter la section */
+}
+
+section[id="letters"] ul li {
+    border: 0.1rem solid black;
+    width: 2rem;
+    height: 2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    background: linear-gradient(to right, #ffffff, #ffffff, #ffffff);
+    cursor: pointer;
+    margin: 0.3rem;
+}
+
+section[id="letters"] ul li[class="good"] {
+    background: lightgreen;
+}
+
+section[id="letters"] ul li[class="wrong"] {
+    background: tomato;
+}
+
+section[id="letters"] ul li[class="disabled"] {
+    pointer-events: none;
+    cursor: pointer;
+}
+
+section[id="letters"] button {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    margin-top: 1rem;
+    cursor: pointer;
+    background: linear-gradient(to right, #ffffff, #203a43, #2c5364);
+    color: white;
+}
+
+/* Style de la section pour afficher le mot à trouver */
+section[id="Mot_a_trouver"] figcaption {
+    max-width: 300px;
+    border: 0.1rem solid #ffff;
+    border-radius: 0.5rem;
+    margin: auto;
+    padding: 0.5rem;
+}
+
+section[id="Mot_a_trouver"] figcaption > hr {
+    margin: 0.5rem auto;
+    width: 90%;
+    border-color: rgb(0, 255, 221);
+}
+
+section[id="Mot_a_trouver"] figcaption, 
+section[id="Mot_a_trouver"] > p {
+    margin-top: 1rem;
+}
+
+section[id="Mot_a_trouver"] > p {
+    letter-spacing: 1rem;
+}
+
+section[id="Mot_a_trouver"] > p.gameover {
+    letter-spacing: 0rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+section[id="Mot_a_trouver"] > p.winner {
+    color: lightgreen;
+}
+
+section[id="Mot_a_trouver"] > p.winner::after {
+    content: '\01F603';
+}
+
+section[id="Mot_a_trouver"] > p.looser {
+    color: tomato;
+}
+
+section[id="Mot_a_trouver"] > p.looser::after {
+    content: '\01f625';
+}
+
+/* Nouveaux styles pour la section des informations sur le jeu */
+section[id="game-info"] {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+section[id="game-info"] p {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333333;
+}
+
+section[id="game-info"] .letters-to-find {
+    color: #ff33ff;
+}
+
+section[id="game-info"] .letters-found {
+    color: #28a733;
+}
+
+section[id="game-info"] .attempts {
+    color: #eeff00;
+}
+
+section[id="game-info"] .mistakes {
+    color: #dc3535;
+}
+
+section[id="reload-button"] {
+    position: fixed;
+    bottom: 20px; /* Ajustez cette valeur pour déplacer le bouton vers le haut ou le bas selon vos besoins */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour l'overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay button {
+    /* Styles pour le bouton à l'intérieur de l'overlay */
+}
