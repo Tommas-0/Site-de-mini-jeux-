@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morpion</title>
+    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
+    <link rel="icon" type="image/vnd.icon" href="img/logo-removebg-preview.png">
+</head>
+<body>
+
+    <h1><U>Jeu du Morpion</U></h1>
+    <br><br><br>
+    <!-- Sélection du choix du joueur -->
+    <div class="options">
+        <label for="playerChoice">Choix du joueur :</label>
+        <select id="playerChoice" class="menu">
+            <option value="human">Jouer contre un vrai joueur</option>
+            <option value="computer">Jouer contre l'ordinateur</option>
+        </select>
+    </div>
+    <br>
+    <!-- Conteneur pour afficher le tour du joueur -->
+    <div class="turn-container">
+        <h3>Au tour de</h3>
+        <div class="turn-box align">X</div> <!-- Marqueur de tour pour X -->
+        <div class="turn-box align">O</div> <!-- Marqueur de tour pour O -->
+        <div class="bg"></div> <!-- Fond de la marque de tour -->
+    </div>
+    <!-- Grille principale pour le jeu -->
+    <div class="main-grid">
+        <div class="box align">0</div> <!-- Case 0 -->
+        <div class="box align">1</div> <!-- Case 1 -->
+        <div class="box align">2</div> <!-- Case 2 -->
+        <div class="box align">3</div> <!-- Case 3 -->
+        <div class="box align">4</div> <!-- Case 4 -->
+        <div class="box align">5</div> <!-- Case 5 -->
+        <div class="box align">6</div> <!-- Case 6 -->
+        <div class="box align">7</div> <!-- Case 7 -->
+        <div class="box align">8</div> <!-- Case 8 -->
+    </div>
+    <h2 id="results"></h2> <!-- Affichage du résultat (victoire, égalité) -->
+    <button id="play-again">Rejouer</button> <!-- Bouton pour rejouer -->
+    <script src="script.js"></script> <!-- Lien vers le fichier JavaScript -->
+</body>
+</html>
